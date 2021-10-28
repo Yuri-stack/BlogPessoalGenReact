@@ -32,21 +32,14 @@ function Login() {
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
                         <Typography 
-                            variant='subtitle1' gutterBottom align='center' className='textos1' style={{ fontWeight: 'bold' }}>
+                            variant='subtitle1' gutterBottom align='center' className='textos1'>
                             Cadastre-se
                         </Typography>
                     </Box>
 
                 </Box>
             </Grid>
-            <Grid xs={6} style={{
-                backgroundImage: `url(https://i.imgur.com/d5bMdDJ.jpg)`,
-                backgroundRepeat: 'no-repeat', 
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                width: '100vh', minHeight: '100vh',
-            }}>
-
+            <Grid xs={6} className="imagem">
             </Grid>
         </Grid>
     )

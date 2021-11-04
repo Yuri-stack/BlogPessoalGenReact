@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, Grid, TextField, Typography } from '@material-ui/core'
-import { Box } from '@material-ui/system'
+import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 import "./Login.css"
@@ -31,10 +30,11 @@ function Login() {
                         <Box marginRight={1}>
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
-                        <Typography 
-                            variant='subtitle1' gutterBottom align='center' className='textos1'>
-                            Cadastre-se
-                        </Typography>
+                        <Link to='/cadastro'>
+                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>
+                                Cadastre-se
+                            </Typography>
+                        </Link>
                     </Box>
 
                 </Box>

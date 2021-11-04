@@ -1,6 +1,5 @@
 import React from "react";
-import { Button, Grid, Typography } from "@material-ui/core";
-import { Box } from "@material-ui/system";
+import { Box, Button, Grid, Typography } from "@material-ui/core";
 
 import './Home.css'
 

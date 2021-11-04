@@ -1,6 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography } from '@material-ui/core'
-import { Box } from '@material-ui/system'
+import { AppBar, Box, Toolbar, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 import './Navbar.css'

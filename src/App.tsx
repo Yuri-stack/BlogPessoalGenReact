@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import CadastroUsuario from './pages/CadastroUsuario/CadastroUsuario';
+
 import Navbar from './components/statics/Navbar/Navbar';
 import Footer from './components/statics/Footer/Footer';
 
@@ -24,6 +27,10 @@ function App() {
 
           <Route path="/home">
             <Home />
+          </Route>
+
+          <Route path="/cadastro">
+            <CadastroUsuario />
           </Route>
           
         </div>

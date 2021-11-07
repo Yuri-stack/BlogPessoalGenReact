@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
@@ -7,6 +6,9 @@ import CadastroUsuario from './pages/CadastroUsuario/CadastroUsuario';
 
 import Navbar from './components/statics/Navbar/Navbar';
 import Footer from './components/statics/Footer/Footer';
+
+import ListaTema from './components/temas/ListaTema/ListaTema';
+import ListaPostagem from './components/postagens/ListaPostagem/ListaPostagem';
 
 import './App.css';
 
@@ -25,12 +27,20 @@ function App() {
             <Login />
           </Route>
 
+          <Route path="/cadastro">
+            <CadastroUsuario />
+          </Route>
+          
           <Route path="/home">
             <Home />
           </Route>
 
-          <Route path="/cadastro">
-            <CadastroUsuario />
+          <Route path="/temas">
+            <ListaTema />
+          </Route>
+
+          <Route path="/posts">
+            <ListaPostagem />
           </Route>
           
         </div>

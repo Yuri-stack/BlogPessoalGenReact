@@ -13,3 +13,8 @@ export const login = async(url: string, dados: any, setDados: any) => {
     const resposta = await api.post(url, dados)
     setDados(resposta.data.token)
 }
+
+export const busca = async(url: string, header: any, setDados: any) => {
+    const resposta = await api.get(url, header)
+    setDados(resposta.data)
+}

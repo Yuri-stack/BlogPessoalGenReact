@@ -1,6 +1,7 @@
 import { AppBar, Box, Toolbar, Typography } from '@material-ui/core'
 import { Link, useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from 'react-toastify';
 
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { addToken } from '../../../store/tokens/actions';
@@ -15,7 +16,16 @@ function Navbar() {
 
     function goLogout() {
         dispatch(addToken(''))
-        alert('Usuário Deslogado')
+        toast.info('Usuário Deslogado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        })
         history.push('/login')
     }
 

@@ -1,22 +1,28 @@
-import React from 'react'
 import { AppBar, Box, Toolbar, Typography } from '@material-ui/core'
 import { Link, useHistory } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
+import { useDispatch, useSelector } from "react-redux";
 
+import { TokenState } from "../../../store/tokens/tokensReducer";
+import { addToken } from '../../../store/tokens/actions';
 import './Navbar.css'
 
 function Navbar() {
-    const [token, setToken] = useLocalStorage('token')
     let history = useHistory()
+    const dispatch = useDispatch()
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    )
 
-    function goLogout(){
-        setToken('')
+    function goLogout() {
+        dispatch(addToken(''))
         alert('Usuário Deslogado')
         history.push('/login')
     }
 
-    return (
-        <>
+    var navBarComponent
+
+    if (token !== '') {
+        navBarComponent =
             <AppBar position="static">
                 <Toolbar variant="dense">
                     <Box className="cursor">
@@ -24,7 +30,7 @@ function Navbar() {
                             Blog Pessoal
                         </Typography>
                     </Box>
- 
+
                     <Box display="flex" justifyContent="start">
                         <Link to="/home" className="text-decorator-none">
                             <Box mx={1} className="cursor">
@@ -58,16 +64,21 @@ function Navbar() {
                             </Box>
                         </Link>
 
-                        <Box mx={1} className="cursor" onClick={ goLogout }>
+                        <Box mx={1} className="cursor" onClick={goLogout}>
                             <Typography variant="h6" color="inherit">
                                 Logout
                             </Typography>
                         </Box>
-                        
+
                     </Box>
 
                 </Toolbar>
             </AppBar>
+    }
+
+    return (
+        <>
+            { navBarComponent }
         </>
     )
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Box, Button, Grid, Typography } from "@material-ui/core";
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux';  
 import { TokenState } from '../../store/tokens/tokensReducer';
 
@@ -40,7 +40,9 @@ function Home() {
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
-                        <Button className="botao" variant="outlined">Ver Postagens</Button>
+                        <Link to="/posts" className="text-decorator-none">
+                            <Button className="botao" variant="outlined">Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
 

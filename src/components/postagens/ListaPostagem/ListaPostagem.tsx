@@ -36,7 +36,7 @@ function ListaPostagem() {
     return (
         <>
             {posts.map(post => (
-                <Box m={2} >
+                <Box m={2} key={ post.id }>
                     <Card variant="outlined">
                         <CardContent>
                             <Typography color="textSecondary" gutterBottom>

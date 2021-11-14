@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react'
 import { Typography, Button, Box, Card, CardActions, CardContent } from "@material-ui/core"
 import { useHistory, useParams } from 'react-router';
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from "react-redux";
 
 import { buscaId, deleteId } from "../../../services/Service";
 import Postagem from '../../../models/Postagem';
 
+import { TokenState } from "../../../store/tokens/tokensReducer";
 import './DeletarPostagem.css';
 
 function DeletarPostagem() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
-    const [post, setPosts] = useState<Postagem>()
+    const [posts, setPosts] = useState<Postagem>()
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    )
 
     useEffect(() => {
-        if (token == "") {
+        if (token === "") {
             alert("Você precisa estar logado")
             history.push("/login")
 

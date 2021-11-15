@@ -1,46 +1,119 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="Logo React" width="240">
+    <br><br>
+    Blog Pessoal Generation
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div>
+<p align="center">
+    <a href="https://www.linkedin.com/in/yuri-silva99/" target="_blank">
+        <img src="https://img.shields.io/static/v1?label=Author&message=Yuri&color=00ba6d&style=for-the-badge&logo=LinkedIn" alt="Author: Yuri">
+    </a>
+    <a>
+        <img src="https://img.shields.io/static/v1?label=Language&message=React&color=aquamarine&style=for-the-badge&logo=React" alt="Language: React">
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/static/v1?label=Language&message=Typescript&color=blue&style=for-the-badge&logo=Typescript" alt="Language: Typescript">
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/static/v1?label=Language&message=Javascript&color=yellow&style=for-the-badge&logo=JavaScript" alt="Language: Javascript">
+    </a>
+  <br>
+</p>
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+## Table of Contents
 
-### `yarn start`
+<p align="center">
+ <a href="#about">About</a> •
+ <a href="#features">Features</a> •
+ <a href="#revised-concepts">Revised Concepts</a> • 
+ <a href="#installation">Installation</a> • 
+ <a href="#getting-started">Get Started</a> • 
+ <a href="#technologies">Technologies</a> • 
+ <a href="#license">License</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📌About
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div>
+    <p align="center">
+        Construction of a Personal Blog using React, a project developed at Generation's Bootcamp with the aim of learning.
+    </p>
+</div>
 
-### `yarn test`
+## 🚀Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Creation, Editing and Deletion of Posts, Themes and Users.
+- Conditional Rendering
 
-### `yarn build`
+## 👓Revised Concepts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React Componentization
+- Redux
+- Axios for Routes Control
+- Stylization using Material-UI
+- API consumption
+- Posts, Themes and User CRUD
+- Custom Alerts
+- Control of Logged Users
+## 📕Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**You must have already installed**
+- [Node.js](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Recommendations**
+-   It is recommended that you have installed Google Chrome or Edge
+-   I recommend using VSCode as development IDE
 
-### `yarn eject`
+**Let's divide it into 2 steps.**
+1. Clone this repository
+2. Install dependencies
+3. Initializing the BackEnd
+  ---
+#### 1. Clone this repository
+```
+$ git clone https://github.com/Yuri-stack/BlogPessoalGenReact
+```
+---
+### 2. Install the dependencies
+```
+$ npm install
+```
+or
+```
+$ yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Make sure your internet is stable, as this may take a while* 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Initializing the BackEnd
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you have a ***BackEnd local***, start it before the React Project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you have a ***Hosted BackEnd***, access the Service file and change the BaseUrl and routes, and change Models of project according to your BackEnd
 
-## Learn More
+## 🎮Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Run the backend or configure as explained above 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Run the project
+```
+$ yarn start
+```
+3. Now, open your browser and navigate to: http://localhost:3000
+
+## 🌐Technologies
+
+- [React](https://pt-br.reactjs.org/)
+- [Axios](https://axios-http.com/docs/intro)
+- [Material-UI](https://mui.com/pt/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 📝License
+
+Released in 2021.
+This project is under the MIT license.
+Made with love by [Yuri Oliveira](https://github.com/Yuri-stack) 🚀.
